@@ -13,7 +13,7 @@ from itertools import combinations, chain
 
 
 
-class active_pairwise_clustering_main:
+class clustering:
     """
     
     Attributes:
