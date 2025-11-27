@@ -33,17 +33,3 @@ def compute_score(intermediate_clustering, maxbudget):
 
     return ARI_score, NMI_score, silhouette_score
 
-
-name='IRIS'
-X,y = open_dataset(name)
-print('DATASET : ', name)
-
-max_budget = 20
-sigma1 = 0.1
-sigma2 = 0.1
-
-
-clusterer_FALCON = FALCON(X,y,RBFKernel(0.25), RBFKernel(0.25))
-clustering_FALCON, intermediate_clustering = clusterer_FALCON.cluster(n=max_budget,k_proto=2, train_indices = None)
-    
-ARI_FALCON, NMI_FALCON, silhouette_FALCON = compute_score(intermediate_clustering,max_budget)
