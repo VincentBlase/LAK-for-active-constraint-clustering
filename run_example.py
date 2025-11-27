@@ -11,11 +11,11 @@ print('DATASET : ', name)
 
 max_budget = 20
 
-ARI_FALCON = []
-NMI_FALCON = []
-silhouette_FALCON = []
+ARI_score = []
+NMI_score = []
+silhouette_score = []
 
-clusterer_FALCON = FALCON(X,y,adaptive_rbf_kernel, adaptive_rbf_kernel)
-clustering_FALCON, intermediate_clustering = clusterer_FALCON.cluster(n=max_budget,k_proto=2, train_indices = None)
+clusterer = clustering(X,y,adaptive_rbf_kernel, adaptive_rbf_kernel)
+clustering_final, intermediate_clustering = clusterer.cluster(n=max_budget,k_proto=2, train_indices = None)
     
-ARI_FALCON, NMI_FALCON, silhouette_FALCON = compute_score(intermediate_clustering,max_budget)
+ARI_score, NMI_score, silhouette_score = compute_score(intermediate_clustering,max_budget)
