@@ -214,25 +214,25 @@ def open_dataset(name):
         X = X.drop_duplicates(keep='first').dropna()
 
     if name =='TAE':
-        X = pd.read_csv('/projects/sig/vblase/data/TAE/tae.data')
+        X = pd.read_csv('/data/tae.data')
         y = np.array(X['3.1'])
         X = X.drop(columns='3.1')
         X = X.drop_duplicates(keep='first').dropna()
 
     if name == 'SEEDS':
-        X = pd.read_csv('/projects/sig/vblase/data/SEEDS/seeds_dataset.txt', sep='\t', on_bad_lines='skip')
+        X = pd.read_csv('/data/seeds_dataset.txt', sep='\t', on_bad_lines='skip')
         y = np.array(X['1'])
         X = X.drop(columns='1')
         X = X.drop_duplicates(keep='first').dropna()
 
     if name == 'mfeat_karhunen':
-        X = pd.read_csv('/projects/sig/vblase/data/m_feat_kar/mfeat-karhunen.arff', sep=',', skiprows = 154, header=None,on_bad_lines='skip')
+        X = pd.read_csv('/data/mfeat-karhunen.arff', sep=',', skiprows = 154, header=None,on_bad_lines='skip')
         y = np.array(X[64])
         X = X.drop(columns=64)
         X = X.drop_duplicates(keep='first').dropna()
 
     if name == 'mfeat_zernike':
-        X = pd.read_csv('/projects/sig/vblase/data/m_feat_zer/mfeat-zernike.arff', sep=',', skiprows = 137, header=None,on_bad_lines='skip')
+        X = pd.read_csv('/data/mfeat-zernike.arff', sep=',', skiprows = 137, header=None,on_bad_lines='skip')
         y = np.array(X[47])
         X = X.drop(columns=47)
         X = X.drop_duplicates(keep='first').dropna()
@@ -240,7 +240,7 @@ def open_dataset(name):
         
 
     if name == 'PIMA':
-        X = pd.read_csv('/projects/sig/vblase/data/PIMA/pima_indians_diabetes.txt', sep=',', on_bad_lines='skip')
+        X = pd.read_csv('/data/pima_indians_diabetes.txt', sep=',', on_bad_lines='skip')
         y = np.array(X['1'])
         X = X.drop(columns='1')
         X = X.drop_duplicates(keep='first').dropna()
