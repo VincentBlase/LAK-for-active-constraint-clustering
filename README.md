@@ -17,7 +17,7 @@ name='IRIS' #Enter dataset name
 X,y = open_dataset(name)
 print('DATASET : ', name)
 
-max_budget = 20
+max_budget = 200
 
 ARI_score = []
 NMI_score = []
