@@ -5,7 +5,7 @@ from LAK.open_data import open_dataset
 from LAK.compute_score import compute_score
 from LAK.LAK import adaptive_rbf_kernel
 
-name='IRIS'
+name='IRIS' #Enter dataset name
 X,y = open_dataset(name)
 print('DATASET : ', name)
 
@@ -18,4 +18,16 @@ silhouette_score = []
 clusterer = clustering(X,y,adaptive_rbf_kernel, adaptive_rbf_kernel)
 clustering_final, intermediate_clustering = clusterer.cluster(n=max_budget,k_proto=2, train_indices = None)
     
-ARI_score, NMI_score, silhouette_score = compute_score(intermediate_clustering,max_budget)
+ARI_score, NMI_score, silhouette_score = compute_score(intermediate_clustering,max_budget) #Compute score for each budget value
+
+
+<-- Print table 2 values -->
+
+print(ARI_score[25])
+print(ARI_score[50])
+print(ARI_score[100])
+print(ARI_score[200])
+
+
+
+
