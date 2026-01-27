@@ -42,7 +42,7 @@ print(ARI_score[200])
 We recommand to download files on python 3.10.4 (Should work with other versions)
 
 ## Usage
-Active clustering with pairwise constraint
+Active clustering with pairwise constraints
 
 ## License
 For open source projects, say how it is licensed.
